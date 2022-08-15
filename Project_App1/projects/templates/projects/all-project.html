@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+Project List
+{% endblock title %}
+  
+
+{% block content  %}
+
+All Projects : 
+{% for i in project %}
+    <ul>
+    <a href="{% url 'proj_pid' i.id %}">{{i.title}}</a>  
+    </ul>
+{% endfor %}
+
+{% endblock content%}
+

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+All projects
+{% endblock title %}
+  
+
+
+All Projects : 
+{% block content  %}
+    <table>
+        <tr> 
+            <th>| Title |</th>
+            <th>| Description |</th>
+            <th>| Created at |</th>            
+            <th>| INFO |</th>
+      
+        </tr>
+        {% for i in project %}
+        <tr>
+            <td>{{ i.title }}</td>
+            <td>{{ i.description }}</td>
+            <td>{{ i.created }}</td>
+            <td><a href="{% url 'proj_pid' i.id  %}">View</a></td>
+            <td><a href="{% url 'update_project' i.id  %}">Edit</a></td>
+            <td><a href="{% url 'delete_project' i.id  %}">Delete</a></td>
+        {% endfor %}
+        </tr>
+    </table>
+
+{% endblock content%}
+

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+Project Details
+{% endblock title %}
+  
+
+{% block content  %}
+    <table>
+        <tr> {{pdic.title}}
+            <th>| ID |</th>
+            <th>| Title |</th>
+           
+            <th>| Created at |</th>
+            <th>| Votes Total |</th>
+            <th>| Votes Ratio |</th>
+            <th>| Tags |</th>
+        </tr>
+        <td>{{ pdic.id }}</td>
+        <td>{{ pdic.title }}</td>
+     
+        <td>{{ pdic.created }}</td>
+        <td>{{ pdic.vote_total }}</td>
+        <td>{{ pdic.ivote_ratio }}</td>
+        {% for i in pdic.tags.all %}
+            <td>{{ i }}</td>
+        {% endfor %}
+    </table>
+
+{% endblock content %}
+
