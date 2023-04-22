@@ -1,0 +1,50 @@
+-> For new repo/project
+
+git init     
+git config --global user.email "180120107052@git.org.in"
+git config --global user.name "Harsh-shah10"
+
+-> Point the repo 
+git remote add origin https://github.com/Harsh-shah10/link
+
+-> to track files
+git status
+
+-> to make the changes to be commited
+git add .
+
+-> commit the changes
+git commit -m "pushing basic test html css code"
+
+-> pushing the code
+git push 
+
+# will give u some error msg - paste that code in terminal 
+and ur code will be pushed
+
+----------------------------------------------------------
+
+If add changes to the code - pushing the code
+----------------------------------------------------------
+> to make the changes to be commited
+git add .
+
+-> commit the changes
+git commit -m "pushing basic test html css code"
+
+-> pushing the code
+git push 
+
+
+-----------------------------------------------------------------------
+! [rejected] master -> master (fetch first) error: failed to push 
+Soln.
+As it is stated in the Error message you have to "fetch first." This worked for me. Use the command:
+
+git fetch origin master
+Then follow these steps to merge:
+
+git pull origin master
+git add .
+git commit -m 'your commit message'
+git push origin master

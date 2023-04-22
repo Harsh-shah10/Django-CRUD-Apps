@@ -1,0 +1,18 @@
+- creating a virtual env
+python -m venv venvname
+
+- activating venv
+venvname\Scripts\activate
+
+- create a project 
+django-admin startproject projname
+
+- create an app inside the project directory
+python manage.py startapp app1
+// after creating ann app its necessory to register that app inside dettings.py of project name
+INSTALLED_APPS = [
+    'app1'
+]
+
+- create superuser
+python manage.py createsuperuser
